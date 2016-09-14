@@ -12,7 +12,7 @@ def build_content
   JSON.pretty_generate(new_resource.content)
 end
 
-use_inline_resources
+use_inline_resources if defined?(use_inline_resources)
 
 action :create do
   # don't create the file if the existing file was empty and so is the new one
